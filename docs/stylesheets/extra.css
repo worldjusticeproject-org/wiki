@@ -24,3 +24,39 @@
   --md-accent-fg-color:         #43bccd;
   --md-typeset-a-color:         #b79cf0;
 }
+
+/* ==========================================================================
+   Home page logo lockup ("World Justice Project" logo + "Wiki" corner badge)
+   ========================================================================== */
+
+.md-typeset .wjp-hero {
+  position: relative;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.4rem auto 1.6rem;
+  padding: 0;
+  line-height: 0;
+}
+
+.md-typeset .wjp-hero__logo {
+  display: block;
+  width: 340px;
+  max-width: 100%;
+  height: auto;
+}
+
+.md-typeset .wjp-hero__badge {
+  position: absolute;
+  bottom: -0.05rem;
+  right: 1.8rem;
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .wjp-hero__badge {
+  color: #b79cf0;
+}

@@ -1,5 +1,13 @@
-# WJP Wiki
+---
+title: Home
+---
 
+<h1 class="wjp-hero">
+  <img class="wjp-hero__logo" src="assets/wjp-logo-full-light.svg#only-light" alt="World Justice Project">
+  <img class="wjp-hero__logo" src="assets/wjp-logo-full-dark.svg#only-dark" alt="World Justice Project">
+  <span class="wjp-hero__badge">Wiki</span>
+</h1>
+---
 *The shared reference for how we work with code and data at WJP — for new and
 existing team members alike.*
 
