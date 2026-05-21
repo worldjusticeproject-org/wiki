@@ -1,0 +1,26 @@
+/* ==========================================================================
+   World Justice Project brand colors
+   Sourced from the WJP theme CSS (worldjusticeproject.org):
+     #400099  brand purple        -> primary
+     #391093  brand purple, dark  -> hover / dark states
+     #43bccd  brand teal          -> accent
+   These override Material's named palette via its CSS custom properties.
+   ========================================================================== */
+
+/* Light mode */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #400099;
+  --md-primary-fg-color--light: #5b1fb8;
+  --md-primary-fg-color--dark:  #2e006e;
+  --md-accent-fg-color:         #43bccd;
+  --md-typeset-a-color:         #400099;
+}
+
+/* Dark mode */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #400099;
+  --md-primary-fg-color--light: #5b1fb8;
+  --md-primary-fg-color--dark:  #2e006e;
+  --md-accent-fg-color:         #43bccd;
+  --md-typeset-a-color:         #b79cf0;
+}

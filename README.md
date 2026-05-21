@@ -1,6 +1,6 @@
-# WJP Code & Data Wiki
+# WJP Wiki
 
-Source for the **WJP Code & Data Wiki** — a living guide to the workflows, tools,
+Source for the **WJP Wiki** — a living guide to the workflows, tools,
 and best practices we use for code and data at WJP.
 
 The site is built with [MkDocs](https://www.mkdocs.org/) and the

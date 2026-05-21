@@ -1,4 +1,4 @@
-# WJP Code & Data Wiki
+# WJP Wiki
 
 *The shared reference for how we work with code and data at WJP — for new and
 existing team members alike.*

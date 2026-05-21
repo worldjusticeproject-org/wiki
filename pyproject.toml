@@ -1,7 +1,7 @@
 [project]
 name = "wiki"
 version = "0.1.0"
-description = "WJP Code & Data Wiki — shared workflows, tools, and best practices."
+description = "WJP Wiki — shared workflows, tools, and best practices."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
