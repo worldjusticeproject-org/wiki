@@ -1,0 +1,90 @@
+site_name: WJP Code & Data Wiki
+site_description: >-
+  Shared workflows, tools, and best practices for working with code and data at WJP.
+# site_url is intentionally left unset. When it includes a subpath (.../wiki/),
+# `mkdocs serve` nests the local site under that path and the dev server bounces
+# `localhost:8000` to `/wiki/`, which breaks local navigation. The site still
+# deploys correctly to GitHub Pages because all internal links are relative.
+# site_url: https://worldjusticeproject-org.github.io/wiki/
+
+repo_name: worldjusticeproject-org/wiki
+repo_url: https://github.com/worldjusticeproject-org/wiki
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+nav:
+  - Home:
+      - index.md
+      - Contributing to the Wiki: home/contributing.md
+  - Guide:
+      - guide/index.md
+      - Getting Started:
+          - Basic Concepts: guide/getting-started/basic-concepts.md
+          - Environment Setup: guide/getting-started/environment-setup.md
+      - Using GitHub:
+          - Core Workflow: guide/github/core-workflow.md
+          - Pull Requests & Review: guide/github/pull-requests.md
+          - Issues & Discussions: guide/github/issues-discussions.md
+      - Languages:
+          - guide/languages/index.md
+          - Python: guide/languages/python.md
+          - R: guide/languages/r.md
+          - Stata: guide/languages/stata.md
+      - WJP Standards:
+          - GitHub Rules: guide/wjp-standards/github-rules.md
+          - Naming Conventions: guide/wjp-standards/naming-conventions.md
+          - Data & Security: guide/wjp-standards/data-and-security.md
+          - SharePoint Integration: guide/wjp-standards/sharepoint.md
+          - Project Workflows: guide/wjp-standards/project-workflows.md
+          - Documentation & Handoff: guide/wjp-standards/documentation-handoff.md
+  - Project Blogs:
+      - blogs/index.md
+      - New Entry Template: blogs/template.md
+  - Resources:
+      - resources/index.md
