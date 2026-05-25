@@ -60,3 +60,57 @@
 [data-md-color-scheme="slate"] .md-typeset .wjp-hero__badge {
   color: #b79cf0;
 }
+
+/* ==========================================================================
+   Blog sidebar: render the Tags section as a wrapping row of chips.
+   The list and items lose their default vertical-list spacing so the
+   md-tag links read as inline badges instead of stacked nav rows. The
+   chip look (background, padding, radius) is re-asserted here because
+   the nav context strips Material's default .md-tag styling.
+   ========================================================================== */
+
+.md-nav__list--tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.4rem 0.6rem 0.6rem;
+  list-style: none;
+}
+
+.md-nav__list--tags > .md-nav__item {
+  margin: 0;
+  padding: 0;
+}
+
+.md-nav__list--tags .md-tag {
+  align-items: center;
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 2.4rem;
+  color: var(--md-default-fg-color);
+  display: inline-flex;
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0.3125em 0.78125em;
+  text-decoration: none;
+  transition: background-color 125ms, color 125ms;
+}
+
+.md-nav__list--tags .md-tag:hover,
+.md-nav__list--tags .md-tag:focus {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+  outline: none;
+}
+
+.md-nav__list--tags .md-tag--active {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.md-nav__list--tags .md-tag--active:hover,
+.md-nav__list--tags .md-tag--active:focus {
+  background-color: var(--md-primary-fg-color--dark);
+  color: var(--md-primary-bg-color);
+}
