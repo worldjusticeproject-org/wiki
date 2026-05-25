@@ -33,7 +33,7 @@ it as a day-to-day reference afterwards.*
 ## How it's organized
 
 - **[Guide](guide/index.md)** — workflows, standards, and best practices.
-- **[Project Blogs](blogs/index.md)** — lessons and decisions from past projects.
+- **[Blog](blog/index.md)** — announcements, how-tos, and retrospectives.
 - **[Resources](resources/index.md)** — links to tools, dashboards, and templates.
 
 ## Contributing
