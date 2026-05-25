@@ -13,6 +13,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   logo: assets/wjp-logo.svg
   favicon: assets/favicon.svg
@@ -66,6 +67,10 @@ plugins:
       pagination_per_page: 10
       archive: true
       archive_date_format: yyyy
+  - tags
+
+hooks:
+  - hooks/blog_tags_nav.py
 
 extra_css:
   - stylesheets/extra.css
