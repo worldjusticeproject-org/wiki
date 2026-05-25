@@ -40,7 +40,10 @@ date: 2026-05-25
 authors:
   - dataguirre
 categories:
-  - Announcements
+  - Artificial Intelligence
+tags:
+  - Rule of Law
+  - News data
 ---
 ```
 
