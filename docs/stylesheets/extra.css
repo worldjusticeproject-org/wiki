@@ -62,6 +62,148 @@
 }
 
 /* ==========================================================================
+   Setup page: visual flow for the basic Git environment.
+   ========================================================================== */
+
+.md-typeset .wjp-setup-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) auto minmax(0, 2fr);
+  gap: 0.85rem;
+  align-items: stretch;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .wjp-setup-flow__group {
+  position: relative;
+  padding: 1.75rem 0.85rem 0.85rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.45rem;
+  background: color-mix(in srgb, var(--md-default-bg-color) 88%, var(--md-primary-fg-color) 12%);
+}
+
+.md-typeset .wjp-setup-flow__label {
+  position: absolute;
+  top: 0.55rem;
+  left: 0.85rem;
+  color: var(--md-primary-fg-color);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.md-typeset .wjp-setup-flow__track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.2rem, 1fr));
+  gap: 0.7rem;
+}
+
+.md-typeset .wjp-setup-flow__track::before {
+  position: absolute;
+  top: 1.45rem;
+  right: 0.6rem;
+  left: 0.6rem;
+  height: 0.12rem;
+  background: var(--md-accent-fg-color);
+  content: "";
+  opacity: 0.45;
+}
+
+.md-typeset .wjp-setup-flow__bridge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.2rem;
+  color: var(--md-primary-fg-color);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.md-typeset .wjp-setup-flow__bridge::before,
+.md-typeset .wjp-setup-flow__bridge::after {
+  display: block;
+  width: 0.9rem;
+  height: 0.12rem;
+  margin: 0 0.25rem;
+  background: var(--md-accent-fg-color);
+  content: "";
+}
+
+.md-typeset .wjp-setup-flow__node {
+  position: relative;
+  min-height: 6.2rem;
+  padding: 2.55rem 0.75rem 0.75rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 0.12rem 0.5rem rgba(0, 0, 0, 0.06);
+}
+
+.md-typeset .wjp-setup-flow__node strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--md-primary-fg-color);
+  font-size: 0.82rem;
+}
+
+.md-typeset .wjp-setup-flow__node span:last-child {
+  display: block;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.md-typeset .wjp-setup-flow__step {
+  position: absolute;
+  z-index: 1;
+  top: 0.68rem;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 60em) {
+  .md-typeset .wjp-setup-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .md-typeset .wjp-setup-flow__bridge {
+    min-height: 2rem;
+  }
+
+  .md-typeset .wjp-setup-flow__bridge::before,
+  .md-typeset .wjp-setup-flow__bridge::after {
+    width: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 38em) {
+  .md-typeset .wjp-setup-flow__track {
+    grid-template-columns: 1fr;
+  }
+
+  .md-typeset .wjp-setup-flow__track::before {
+    top: 0.7rem;
+    bottom: 0.7rem;
+    left: 50%;
+    width: 0.12rem;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
    Blog sidebar: render the Tags section as a wrapping row of chips.
    The list and items lose their default vertical-list spacing so the
    md-tag links read as inline badges instead of stacked nav rows. The
